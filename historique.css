@@ -1,0 +1,269 @@
+body {
+    margin: 0;
+    line-height: normal;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+  .grid-item {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .desktop-2-historique-child {
+    position: absolute;
+    top: 164px;
+    left: 67px;
+    background-color: var(--color-gainsboro);
+    width: 222px;
+    height: 52px;
+  }
+  .logo-icon {
+    position: relative;
+    width: 244px;
+    height: 81.5px;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+  .logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .tab {
+    color: var(--color-gray-200);
+  }
+  .tab,
+  .tab1 {
+    position: relative;
+    font-weight: 600;
+  }
+  .leading,
+  .tabs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .tabs {
+    width: 458px;
+    flex-shrink: 0;
+    gap: var(--gap-md);
+  }
+  .leading {
+    gap: var(--gap-lg);
+  }
+  .picture-icon {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+  .name {
+    position: relative;
+    font-weight: 500;
+  }
+  .profile {
+    background-color: var(--color-white);
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: var(--gap-sm);
+    font-size: var(--font-size-base);
+    color: var(--color-gray-200);
+  }
+  .content,
+  .header,
+  .profile {
+    display: flex;
+    align-items: center;
+  }
+  .content {
+    align-self: stretch;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .header {
+    position: absolute;
+    top: 11px;
+    left: -68px;
+    border-bottom: 1px solid var(--color-darkkhaki);
+    box-sizing: border-box;
+    width: 1512px;
+    flex-direction: column;
+    padding: var(--padding-sm) var(--padding-md);
+    justify-content: flex-start;
+    color: var(--color-slategray);
+  }
+  .historique-de-rgle {
+    position: absolute;
+    top: 179px;
+    left: 87px;
+    font-size: var(--font-size-xl);
+    font-weight: 200;
+    display: inline-block;
+    width: 296px;
+    height: 23px;
+  }
+  .frame-child,
+  .frame-child1,
+  .frame-child2,
+  .frame-inner,
+  .frame-item,
+  .rectangle-div {
+    position: absolute;
+    top: 69px;
+    left: 0;
+    background-color: var(--color-silver);
+    width: 1273px;
+    height: 27px;
+  }
+  .frame-child1,
+  .frame-child2,
+  .frame-inner,
+  .frame-item,
+  .rectangle-div {
+    top: 18px;
+  }
+  .frame-child1,
+  .frame-child2,
+  .frame-inner,
+  .rectangle-div {
+    top: 120px;
+  }
+  .frame-child1,
+  .frame-child2,
+  .rectangle-div {
+    top: 171px;
+  }
+  .frame-child1,
+  .frame-child2 {
+    top: 222px;
+  }
+  .frame-child2 {
+    top: 273px;
+  }
+  .frame-child3,
+  .frame-child4,
+  .frame-child5,
+  .frame-child6,
+  .frame-child7,
+  .frame-child8,
+  .frame-child9 {
+    position: absolute;
+    top: 326px;
+    left: 0;
+    background-color: var(--color-silver);
+    width: 1273px;
+    height: 27px;
+  }
+  .frame-child4,
+  .frame-child5,
+  .frame-child6,
+  .frame-child7,
+  .frame-child8,
+  .frame-child9 {
+    top: 375px;
+  }
+  .frame-child5,
+  .frame-child6,
+  .frame-child7,
+  .frame-child8,
+  .frame-child9 {
+    top: 426px;
+  }
+  .frame-child6,
+  .frame-child7,
+  .frame-child8,
+  .frame-child9 {
+    top: 477px;
+  }
+  .frame-child7,
+  .frame-child8,
+  .frame-child9 {
+    top: 528px;
+  }
+  .frame-child8,
+  .frame-child9 {
+    top: 579px;
+  }
+  .frame-child9 {
+    top: 630px;
+  }
+  .rectangle-icon {
+    position: absolute;
+    top: 72px;
+    left: 542px;
+    width: 71px;
+    height: 22px;
+  }
+  .h1,
+  .h11,
+  .h12,
+  .nom-de-rgle,
+  .nom-de-rgle1,
+  .nom-de-rgle2 {
+    margin: 0;
+    position: absolute;
+    top: 23px;
+    left: 96px;
+    font-size: inherit;
+    font-weight: 200;
+    font-family: inherit;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .h1,
+  .h11,
+  .h12,
+  .nom-de-rgle1,
+  .nom-de-rgle2 {
+    top: 49px;
+  }
+  .h1,
+  .h11,
+  .h12,
+  .nom-de-rgle2 {
+    top: 75px;
+  }
+  .h1,
+  .h11,
+  .h12 {
+    top: 23px;
+    left: 58px;
+  }
+  .h11,
+  .h12 {
+    top: 49px;
+    left: 56px;
+  }
+  .h12 {
+    top: 75px;
+    left: 55px;
+  }
+  .rectangle-parent {
+    position: absolute;
+    top: 242px;
+    left: 67px;
+    background-color: var(--color-lightgray);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    width: 1273px;
+    height: 679px;
+    overflow: hidden;
+    mix-blend-mode: normal;
+    font-size: var(--font-size-base);
+  }
+  .desktop-2-historique {
+    position: relative;
+    background-color: var(--color-white);
+    width: 100%;
+    height: 1012px;
+    overflow: hidden;
+    text-align: left;
+    font-size: var(--font-size-lg);
+    color: var(--color-black);
+    font-family: var(--font-inter);
+  }
+  

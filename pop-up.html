@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="pop-up.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600&display=swap"
+    />
+  </head>
+  <body>
+    <div class="popup-overlay">
+      <div class="popup-container">
+        <div class="popup-header">
+          <img class="popup-line" src="public/line-5.svg" alt="" />
+          <h2 class="popup-title">Ma pop-up</h2>
+          <img class="popup-line" src="public/line-3.svg" alt="" />
+          <button class="popup-close-button" id="popupCloseButton">×</button>
+        </div>
+        <div class="popup-content">
+          <div class="popup-input-container">
+            <label for="popupInput" class="popup-label">Saisissez votre texte :</label>
+            <input class="popup-input" id="popupInput" type="text" />
+          </div>
+          <div class="popup-argument-container">
+            <div class="popup-argument">
+              <input id="argument1" type="checkbox" class="popup-argument-input" />
+              <label for="argument1" class="popup-argument-label">Argument 1</label>
+            </div>
+            <div class="popup-argument">
+              <input id="argument2" type="checkbox" class="popup-argument-input" />
+              <label for="argument2" class="popup-argument-label">Argument 2</label>
+            </div>
+          </div>
+          <button class="popup-submit-button">Valider</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var popupCloseButton = document.getElementById("popupCloseButton");
+      if (popupCloseButton) {
+        popupCloseButton.addEventListener("click", function (e) {
+          var popup = e.currentTarget.parentNode.parentNode;
+          if (popup && popup.classList && popup.classList.contains("popup-overlay")) {
+            popup.style.display = "none";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

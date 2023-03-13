@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exemple de Liste de Contrôle</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+        }         .rule {
+            display: flex;
+            align-items: center;
+        }         .rule input[type="checkbox"] {
+            margin-right: 5px;
+        }         .alpha {
+            margin-top: 10px;
+        }         .alpha li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }         .alpha button {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="rule">
+            <input type="checkbox" name="rule1" id="rule1">
+            <label for="rule1">Règle 1</label>
+        </div>
+        <div class="rule">
+            <input type="checkbox" name="rule" id="rule">
+            <label for="rule2">Règle 2</label>
+        </div>
+        <div class="rule">
+            <input type="checkbox" name="rule3" id="rule3">
+            <label for="rule3">Règle 3</label>
+        </div>
+        <div class="rule">
+            <input type="checkbox" name="rule4" id="rule4">
+            <label for="rule4">Règle 4</label>
+        </div>
+        <button id="addBtn">Ajouter</button>
+        <ul class="alpha"></ul>
+    </div>     <script>
+        const addBtn = document.getElementById("addBtn");
+        const alphaList = document.querySelector(".alpha");         addBtn.addEventListener("click", () => {
+            // Récupération de tous les éléments de règle cochés
+            const checkedRules = document.querySelectorAll('input[type="checkbox"]:checked');             // Parcours de chaque élément de règle cochée pour créer un nouvel élément dans la liste alpha
+            checkedRules.forEach(rule => {
+                const ruleName = rule.getAttribute("name");                 // Vérification si la règle est déjà dans la liste alpha
+                const existingRule = alphaList.querySelector(`[data-rule="${ruleName}"]`);                 if (!existingRule) {
+                    const newAlphaItem = document.createElement("li");
+                    newAlphaItem.dataset.rule = ruleName;
+                    newAlphaItem.innerHTML = `
+                        <span>${ruleName}</span>
+                        <button class="deleteBtn">Supprimer</button>
+                    `;
+                    alphaList.appendChild(newAlphaItem);
+                }
+            });
+        });         alphaList.addEventListener("click", (event) => {
+            // Si un bouton "Supprimer" est cliqué, supprimer l'élément alpha correspondant
+            if (event.target.classList.contains("deleteBtn")) {
+                const alphaItem = event.target.parentNode;
+                alphaList.removeChild(alphaItem);
+            }
+        });
+    </script>
+</body>
+</html>
+

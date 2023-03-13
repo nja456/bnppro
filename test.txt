@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Rules</title>
+  </head>
+  <body>
+    <div id="rules-container">
+      <label><input type="checkbox" name="rules" value="rule1"> Rule 1</label>
+      <br>
+      <label><input type="checkbox" name="rules" value="rule2"> Rule 2</label>
+      <br>
+      <label><input type="checkbox" name="rules" value="rule3"> Rule 3</label>
+      <br>
+      <label><input type="checkbox" name="rules" value="rule4"> Rule 4</label>
+      <br>
+      <button id="add-rule-btn">Add Rule</button>
+    </div>
+    <div id="alpha-container"></div>
+    
+    <script>
+      const addRuleButton = document.getElementById("add-rule-btn");
+      const rulesContainer = document.getElementById("rules-container");
+      const alphaContainer = document.getElementById("alpha-container");
+      
+      addRuleButton.addEventListener("click", () => {
+        const checkedRules = rulesContainer.querySelectorAll('input[type=checkbox]:checked');
+        checkedRules.forEach((rule) => {
+          const ruleName = document.createTextNode(rule.nextSibling.textContent);
+          const ruleElement = document.createElement("div");
+          ruleElement.appendChild(ruleName);
+          const deleteButton = document.createElement("button");
+          deleteButton.textContent = "Delete";
+          deleteButton.addEventListener("click", () => {
+            alphaContainer.removeChild(ruleElement);
+          });
+          ruleElement.appendChild(deleteButton);
+          alphaContainer.appendChild(ruleElement);
+        });
+      });
+    </script>
+  </body>
+</html>

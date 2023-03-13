@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="connexion.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600&display=swap"
+    />
+    <title>Page de connexion</title>
+  </head>
+  <body>
+    <nav class="header">
+      <div class="content">
+        <div class="leading">
+          <div class="logo">
+            <img class="logo-icon" alt="" src="public/logo@2x.png" />
+          </div>
+          <div class="tabs">
+            <a class="tab1" href="historique.html">Historique</a
+            ><a class="tab1" href="Outpt.html">Output</a>
+          </div>
+        </div>
+        <div class="profile">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-person"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"
+            />
+          </svg>
+          <h1 class="name">User</h1>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <section class="conex-box">
+        <h2 class="connexion">CONNEXION</h2>
+        <form>
+          <label for="username" class="form-label">Nom d'utilisateur</label>
+          <input
+            class="form-input"
+            type="text"
+            id="username"
+            name="username"
+            required
+          />
+          <label for="password" class="form-label">Mot de passe</label>
+          <input
+            class="form-input"
+            type="password"
+            id="password"
+            name="password"
+            required
+          />
+          <button class="submit-button" autofocus>Valider</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

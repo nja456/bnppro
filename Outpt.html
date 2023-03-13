@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="Outpt.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600&display=swap"
+    />
+  </head>
+  <body>
+    <div class="desktop-5-output">
+      <button class="desktop-5-output-child"></button>
+      <div class="header">
+        <div class="content">
+          <div class="leading">
+            <div class="logo">
+              <img class="logo-icon" alt="" src="public/logo@2x.png" />
+            </div>
+            <div class="tabs">
+              <div class="tab">Login</div>
+              <div class="tab1">Historique</div>
+              <div class="tab1">Output</div>
+              <div class="tab1">Log out</div>
+            </div>
+          </div>
+          <div class="profile">
+            <img class="picture-icon" alt="" src="public/picture@2x.png" />
+            <div class="name">User</div>
+          </div>
+        </div>
+      </div>
+      <div class="rectangle-parent" id="rectangle-parent">
+      </div>
+      <div class="output">Output</div>
+    </div>
+  
+  
+  
+  <script>
+
+
+    const outpo = document.getElementById('rectangle-parent');
+    
+    // Récupérer les données depuis le stockage local
+    var myDataJson = localStorage.getItem("myDataArray");
+
+    // Convertir la chaîne JSON en tableau JavaScript
+    var myData = JSON.parse(myDataJson);
+
+    // Utiliser les données pour générer le contenu de la page
+    for (var i = 0; i < myData.length; i++) {
+      var row = document.createElement("div");
+      row.textContent = "input1 :" + myData[i].input1+"-" +" input2 :"+myData[i].input2;
+      outpo.appendChild(row);
+    }
+    
+
+  </script>
+  </body>
+</html>
+
+
+
