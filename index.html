@@ -21,11 +21,8 @@
               <img class="logo-icon4" alt="" src="public/logo@2x.png" />
             </div>
             <div class="tabs4">
-              <a
-                class="tab16"
-                href="connexion.html"
-                >Login</a
-              ><a class="tab17" href="historique.html"
+              
+              <a class="tab17" href="historique.html"
                 >Historique</a
               ><a class="tab17" href="Outpt.html">Output</a
               ><a
@@ -44,6 +41,7 @@
       <div class="oprations-group">
         <div id="op_se" class="oprations1">Opérations sélectionnées</div>
         <div class="frame-child72"></div>
+        <button id="validerBtn" class="frame-child81">valider</button>
       </div>
       <div id="op_a_se" class="slectionner-oprations-group">
         <div class="slectionner-oprations1">Sélectionner Opérations</div>
@@ -54,7 +52,7 @@
         <div class="div28">2</div>
         <div class="div29">3</div>
         <div class="div30">4</div>
-        <div class="s-blabla1">S : </div>
+        <div class="s-blabla1">S  </div>
         <div class="frame-child75"></div>
         <div class="div31">5</div>
         <div class="frame-child76"></div>
@@ -63,10 +61,10 @@
         <div class="div34">8</div>
         <div class="frame-child77"></div>
         <div class="frame-child78"></div>
-        <div class="e-blabla1">E : </div>
-        <div class="r-blabla1">R : </div>
-        <div class="v-blabla3">V : </div>
-        <div class="egale3">Egale =</div>
+        <div class="e-blabla1">E  </div>
+        <div class="r-blabla1">R  </div>
+        <div class="v-blabla3">V  </div>
+        <div class="egale3">Egale (=)</div>
         <div class="diffrent1">Diffèrent &lt;&gt;</div>
         <div class="infrieur1">Inférieur &lt;</div>
         <div class="suprieur1">Supérieur &gt;</div>
@@ -98,22 +96,22 @@
           class="frame-child100"
           type="checkbox"
           id="rectangleCheckbox3"
-          name="E :"
+          name="E"
         /><input
           class="frame-child101"
           type="checkbox"
           id="rectangleCheckbox4"
-          name="R :"
+          name="R"
         /><input
           class="frame-child103"
           type="checkbox"
           id="rectangleCheckbox6"
-          name="S :"
+          name="S"
         /><input
           class="frame-child104"
           type="checkbox"
           id="rectangleCheckbox7"
-          name="V :"          
+          name="V"          
         /><input
           class="frame-child105"
           type="checkbox"
@@ -133,33 +131,33 @@
           class="frame-child108"
           type="checkbox"
           id="rectangleCheckbox11"
-          name="supérieur >"
+          name="supérieur ou égal >="
         /><input
           class="frame-child109"
           type="checkbox"
           id="rectangleCheckbox12"
-          name="supérieur ou égal >="
+          name="Inférieur ou égal >="
         /><input class="frame-child110" type="checkbox" id="rectangleCheckbox14"
         name="Compris []" /><input
           class="frame-child111"
           type="checkbox"
           id="rectangleCheckbox14"
-          name="Inférieur ou égal >="
+          name="(Supérieur ou égal et inférieur) OU (Inférieur et supérieur ou égal) [["
         /><input
           class="frame-child112"
           type="checkbox"
           id="rectangleCheckbox15"
-          name="Compris []"
+          name="(Inférieur ou égal et supérieur) OU (Supérieur et inférieur ou égal) ]]"
         /><input
           class="frame-child113"
           type="checkbox"
           id="rectangleCheckbox16"
-          name="(Supérieur ou égal et inférieur) OU (Inférieur et supérieur ou égal) [["
+          name="SEMIDUR"
         /><input
           class="frame-child114"
           type="checkbox"
           id="rectangleCheckbox17"
-          name="(Inférieur ou égal et supérieur) OU (Supérieur et inférieur ou égal) ]]"
+          name="Supérieur >"
         />
       </div>
       <div class="desktop-1-main-page-child"></div>  
@@ -186,6 +184,7 @@
 
 
     <script>
+            
       var popuprectangleButton = document.getElementById("popupCloseButton");
       if (popuprectangleButton) {
         popuprectangleButton.addEventListener("click", function (e) {
@@ -721,8 +720,9 @@ submitBtn.addEventListener('click', function (e)  {
 });
 
 const input = document.querySelector('#deskinput1');
-input.addEventListener('keyup', function(event) {
-  if (event.key === 'Enter') {
+const container = document.getElementById("op_se");
+
+validerBtn.addEventListener('click', function (e)  {
     // Récupération de la valeur de l'input et création d'un objet pour stocker la valeur et la date
     const value = input.value;
     const data = { value, date: new Date().toLocaleDateString() };
@@ -733,14 +733,20 @@ input.addEventListener('keyup', function(event) {
     // Ajout des nouvelles données au tableau et sauvegarde dans le localStorage
     dataArr.push(data);
     localStorage.setItem('data', JSON.stringify(dataArr));
-
-    // Effacement de la valeur de l'input
     input.value = '';
-  }
+  
+    const divElements = container.querySelectorAll('div');
+    const values = [];
+
+    // Parcourir toutes les balises div et récupérer leur contenu
+    divElements.forEach(div => {
+      const value = div.textContent;
+      values.push(value);
 });
-
-
-    
+const valeursSansSupprimer = values.map((valeur) => valeur.replace("Supprimer", ""));
+console.log(valeursSansSupprimer);  
+});
+  
    </script>
   </body>
 </html>

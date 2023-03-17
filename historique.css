@@ -11,6 +11,90 @@ body {
     padding: 10px;
     border: 1px solid #ddd;
   }
+  .logo-icon4 {
+    position: relative;
+    width: 244px;
+    height: 81.5px;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+  .logo4 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .tab16,
+  .tab17 {
+    text-decoration: none;
+    position: relative;
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    font-family: var(--font-inter);
+    color: var(--color-gray-200);
+    text-align: left;
+  }
+  .tab17 {
+    color: var(--color-slategray);
+  }
+  .leading4,
+  .tabs4 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .tabs4 {
+    width: 458px;
+    flex-shrink: 0;
+    gap: var(--gap-md);
+  }
+  .leading4 {
+    gap: var(--gap-lg);
+  }
+  .picture-icon4 {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+  .name4 {
+    position: relative;
+    font-size: var(--font-size-base);
+    font-weight: 500;
+    font-family: var(--font-inter);
+    color: var(--color-gray-200);
+    text-align: left;
+  }
+  .profile4 {
+    background-color: var(--color-white);
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: var(--gap-sm);
+  }
+  .content4,
+  .header4,
+  .profile4 {
+    display: flex;
+    align-items: center;
+  }
+  .content4 {
+    align-self: stretch;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .header4 {
+    position: absolute;
+    top: 19px;
+    left: -36px;
+    border-bottom: 1px solid var(--color-darkkhaki);
+    box-sizing: border-box;
+    width: 1512px;
+    flex-direction: column;
+    padding: var(--padding-sm) var(--padding-md);
+    justify-content: flex-start;
+  }
   
   .desktop-2-historique-child {
     position: absolute;
